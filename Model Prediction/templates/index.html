@@ -1,1 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AGRISOL</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #dbe6f6, #c5796d);
+            margin: 0;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        .navbar {
+            background-color: #333;
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .navbar-brand {
+            color: white;
+            font-size: 24px;
+            font-weight: bold;
+            text-decoration: none;
+        }
+        .navbar-links {
+            display: flex;
+            gap: 20px;
+        }
+        .navbar-links a {
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+            padding: 10px;
+            transition: background-color 0.3s;
+        }
+        .navbar-links a:hover {
+            background-color: #4CAF50;
+            border-radius: 5px;
+        }
+        .navbar-toggle {
+            display: none;
+            color: white;
+            font-size: 24px;
+            cursor: pointer;
+        }
 
+    
+
+
+
+
+
+        .main-content {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            padding: 200px;
+            flex-grow: 1;
+            gap: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .left-section {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        
+        .predictor-container {
+            background-color: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+            max-width: 400px;
+            width: 100%;
+        }
+        h2 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            margin-top: 15px;
+            font-weight: bold;
+        }
+        input {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+        }
+        button {
+            margin-top: 20px;
+            width: 100%;
+            background-color: #4CAF50;
+            color: white;
+            padding: 12px;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #388e3c;
+        }
+        .note {
+            font-size: 12px;
+            color: #777;
+            margin-top: 10px;
+            text-align: center;
+        }
+        @media (max-width: 900px) {
+            .main-content {
+                flex-direction: column;
+                align-items: center;
+            }
+            .left-section, .predictor-container {
+                width: 100%;
+                max-width: 400px;
+            }
+        }
+        @media (max-width: 600px) {
+            .navbar-links {
+                display: none;
+                flex-direction: column;
+                width: 100%;
+                position: absolute;
+                top: 70px;
+                left: 0;
+                background-color: #333;
+                padding: 10px 0;
+            }
+            .navbar-links.active {
+                display: flex;
+            }
+            .navbar-toggle {
+                display: block;
+            }
+        }
+    </style>
+    <script>
+        function validateForm() {
+            const inputs = document.querySelectorAll('input');
+            for (let input of inputs) {
+                if (input.value.trim() === '' || isNaN(input.value)) {
+                    alert("Please fill out all fields with valid numbers.");
+                    return false;
+                }
+            }
+            return true;
+        }
+
+        function toggleNavbar() {
+            const navbarLinks = document.querySelector('.navbar-links');
+            navbarLinks.classList.toggle('active');
+        }
+    </script>
+</head>
+<body>
+    <nav class="navbar">
+        <a href="#" class="navbar-brand">AGRISOL</a>
+        <div class="navbar-links">
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Contact</a>
+        </div>
+        <div class="navbar-toggle" onclick="toggleNavbar()">☰</div>
+    </nav>
+
+    <div class="main-content">
+
+        <div class="predictor-container">
+            <h2>Crop Yield Prediction</h2>
+            <form method="POST" action="/predict" onsubmit="return validateForm();">
+                <label>Area (encoded)</label>
+                <input type="number" name="area" required>
+                <label>Crop Item (encoded)</label>
+                <input type="number" name="item" required>
+                <label>Year</label>
+                <input type="number" name="year" required>
+                <label>Avg Rainfall (mm)</label>
+                <input type="number" step="0.01" name="rainfall" required>
+                <label>Pesticides (Tonnes)</label>
+                <input type="number" step="0.01" name="pesticides" required>
+                <label>Avg Temperature (°C)</label>
+                <input type="number" step="0.01" name="temperature" required>
+                <button type="submit">Predict</button>
+            </form>
+            <div class="note">* Area and Crop must be encoded integers</div>
+        </div>
+    </div>
+</body>
+</html>

@@ -142,49 +142,26 @@ Click predict, the model will output the predicted yield and confidence metrices
 ## Folder Structure
 ```
 Agriculture Yield Prediction Dashboard
-
 |
-
 |__ .gitignore
-
 |
-
 |__ AGRISOL-Jupyter-Notebook.ipynb
-
 |
-
 |__ LICENSE
-
 |
-
 |__ MODEL-AGRI-SDC.xlsx
-
 |
-
 |__ SDC-PROJECT-AGRI.pbix
-
 |
-
 |__ Model Prediction
-
          |
-         
          |__ model.py
-         
          |
-         
          |__ app.py
-         
          |
-         
          |__ templates
-         
              |
-             
              |__ index.html
-             
              |
-             
              |__ result.html
-
 ```

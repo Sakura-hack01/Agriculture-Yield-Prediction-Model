@@ -140,7 +140,7 @@ Click predict, the model will output the predicted yield and confidence metrices
 
 
 ## Folder Structure
-
+```
 Agriculture Yield Prediction Dashboard
 
 |
@@ -187,4 +187,4 @@ Agriculture Yield Prediction Dashboard
              
              |__ result.html
 
-
+```

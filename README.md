@@ -9,19 +9,19 @@ This helps to assist farmers, agronomists, and policymakers in decision-making a
 
 ## Table of Contents
 
-•
+• [Project Overview]
 
-•
+• [Dataset Desciption]
 
-•
+• [Technologies]
 
-•
+• [Architecture]
 
-•
+• [Installation Guide]
 
-•
+• [Usage Instuction]
 
-•
+• [Folder Structure]
 
 
 ## Dataset Description

@@ -70,7 +70,7 @@ This dataset includes historical crop production records along with correspondin
 
 • Model Evaluation and saving
 
-• Predictionon new data
+• Prediction on new data
 
 • PowerBI dashboard visualization
 
@@ -101,7 +101,7 @@ This dataset includes historical crop production records along with correspondin
 
 ### Train model
 
-For traning the model run the following command :-
+For training the model run the following command :-
 
 `python train model.py`
 
@@ -128,15 +128,15 @@ As the flask application starts on the webpage, enter the following values :-
 
 • Area/Region
 
-Click predict, the model will output the predicted yield and confidence metrices
+Click predict, the model will output the predicted yield and confidence metrices.
 
 ### View Analytics in PowerBI
 
 • Open PowerBI.
 
-• Load the privided .pbix file.
+• Load the provided `.pbix` file.
 
-• Ensure it is connected to `PowerBI Import.py` which will predict and then through visualization show us the result.
+• Ensure it is connected to `PowerBI Import.py` which will predict and then through visualization shows the result.
 
 
 ## Folder Structure

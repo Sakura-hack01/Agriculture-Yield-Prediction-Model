@@ -9,4 +9,25 @@ This helps to assist farmers, agronomists, and policymakers in decision-making a
 
 ## Table of Contents
 
+•
+•
+•
+•
+•
+•
+•
 
+
+## Dataset Description
+
+This dataset includes historical crop production records along with corresponding environmental parameters. Key columns incudes :-
+
+• Area
+• Item (Crop Type)
+• Year
+• Pesticides (tonnes)
+•  Yield (tonnes/hectare) [Target variable]
+• Average Temperature (°C)
+• Average Rainfall/Year (mm)
+
+### Dataset :- https://www.kaggle.com/datasets/mrigaankjaswal/crop-yield-prediction-dataset

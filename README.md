@@ -91,25 +91,36 @@ This dataset includes historical crop production records along with correspondin
 
 ### Clone repository
 
-`git clone https://github.com/Sakura-hack01/Agriculture-Yield-Prediction-Dashboard.git`
+```
+git clone https://github.com/Sakura-hack01/Agriculture-Yield-Prediction-Dashboard.git
+```
 
-`cd Agriculture-Yield-Prediction-Dashboard`
+```
+cd Agriculture-Yield-Prediction-Dashboard
+```
 
 ### Install Dependies
 
-`pip install numpy pandas matplotlib seaborn scikit-learn joblib flask`
+```
+pip install numpy pandas matplotlib seaborn scikit-learn joblib flask
+
+```
 
 ### Train model
 
 For training the model run the following command :-
 
-`python train model.py`
+```
+python train model.py
+```
 
 ### Flask Web application
 
 To see the web page for the dashboard you need to run :-
 
-`python app.py`
+```
+python app.py
+```
 
 
 ## Usage Instuction

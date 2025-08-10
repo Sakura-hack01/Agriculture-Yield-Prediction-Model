@@ -167,3 +167,8 @@ Agriculture Yield Prediction Dashboard
              |
              |__ result.html
 ```
+
+
+## LICENSE
+
+This project is licensed under MIT License - see the [LICENSE](LICENSE) file for details.
